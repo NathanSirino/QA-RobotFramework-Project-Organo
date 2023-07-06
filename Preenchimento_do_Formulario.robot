@@ -1,5 +1,8 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library          SeleniumLibrary
+Resource         Setup_teardown.robot
+Test Setup       Dado que eu acesse o Organo
+Test Teardown    Fechar o navegador
 
 *** Variables ***
 ${Campo_Nome}          id=form-nome 
@@ -17,15 +20,13 @@ ${Botao_Criar_Card}    id=form-botao
 
 *** Test Cases ***
 Criar um Card de funcionario
-    Dado que eu acesse o Organo 
-    E preencha os campos do form
+
+    Dado que preencha os campos do form
     Quando cliar no botao criar Card
     Entao identificar o card no time esperado
     
 *** Keywords ***
-Dado que eu acesse o Organo 
-    Open Browser    url=http://localhost:3000/    browser=Chrome 
-E preencha os campos do form
+Dado que preencha os campos do form
     Input Text       ${Campo_Nome}   Maria
     Input Text       ${Campo_Cargo}   Desenvolvedora 
     Input Text       ${Campo_Imagem}  https://picsum.photos/200/300
