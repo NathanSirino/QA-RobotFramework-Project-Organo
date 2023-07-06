@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230706 15:48:31.645" rpa="false" schemaversion="3">
+<suite id="s1" name="Teste" source="/home/vboxuser/Desktop/Projects/QA-RobotFramework-Project-Organo/teste.robot">
+<test id="s1-t1" name="Abrir navegador e acessar o site do organo" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230706 15:48:31.797" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20230706 15:48:31.796" endtime="20230706 15:48:34.353"/>
+</kw>
+<status status="PASS" starttime="20230706 15:48:31.795" endtime="20230706 15:48:34.354"/>
+</test>
+<status status="PASS" starttime="20230706 15:48:31.646" endtime="20230706 15:48:34.355"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
